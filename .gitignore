@@ -45,6 +45,7 @@
 *.app
 *.suo
 *.VC.db
+*.VC.opendb
 *.ipch
 *.sln
 *.log
