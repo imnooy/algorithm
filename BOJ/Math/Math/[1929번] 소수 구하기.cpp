@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
@@ -12,8 +13,9 @@ int main() {
 		arr[i] = true;
 	} //초기화
 
-	for (int i = 2; i*i <= n; i++) {
-		if (arr[i] == true) {//검사안된 수나 소수일 때만
+	for (int i = 2; i <= n; i++) {
+		if (arr[i] == true) {
+			//검사안된 수나 소수일 때만
 			for (int j = i * 2; j <= n; j += i) {
 				//i의 배수를 체크
 				arr[j] = false;
@@ -21,7 +23,7 @@ int main() {
 		}
 	}
 
-	for (int i = 2; i <= n; i++) {
+	for (int i = m; i <= n; i++) {
 		if (arr[i] == true) {
 			cout << i << '\n';
 		}
