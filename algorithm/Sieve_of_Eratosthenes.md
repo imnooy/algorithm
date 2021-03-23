@@ -1,6 +1,6 @@
 # 에라토스테네스의 체
 
-<img width="1536" alt="에라토스테네스의 체" src="https://user-images.githubusercontent.com/75800620/111868612-4509e500-89be-11eb-915d-66c3cc39d20a.gif">
+<img width="736" alt="에라토스테네스의 체" src="https://user-images.githubusercontent.com/75800620/111868612-4509e500-89be-11eb-915d-66c3cc39d20a.gif">
 </br></br>
 
 만약 120까지의 모든 소수를 구한다고 하면,  
