@@ -8,21 +8,23 @@ int main() {
 	int n, m, a;
 	int cnt = 0;
 	cin >> n;
-	int arr[1000001];
 	bool arr1[1000001];
 	fill(arr1, arr1 + 1000001, false);
-	fill(arr, arr + 1000001, 0);
 
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) { //n개의 정수를 입력받는다.
 		cin >> a;
-		arr1[arr[i]] = true;
+		arr1[a] = true;
 	}
 	cin >> m;
 
-	for (int i = 0; i < n; i++) {
-		if (arr1[m - arr[i]] == true) {
-			cnt++;
-			arr1[m - arr[i]] = false;
+	for (int i = 1; i < m; i++) {
+		if (arr1[i]) {
+			if (arr1[m - i]) {
+				if (i != (m - i)) {
+					cnt++;
+					arr1[m - i] = false;
+				}
+			}
 		}
 	}
 
