@@ -25,7 +25,7 @@ int main() {
 
 		if (sistime > 500000) break;
 
-		if (vis[p.first % 2][sistime] || p.second == sistime) {
+		if (vis[p.first % 2][sistime] || p.second == sistime) { //동생 위치에 이미 방문했거나, 언니 위치가 동생 위치일 때
 			cout << p.first;
 			return 0;
 		}
