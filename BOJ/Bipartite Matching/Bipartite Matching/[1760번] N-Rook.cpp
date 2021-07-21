@@ -9,14 +9,14 @@ int row[MAX_N][MAX_N];
 
 bool adj[5002][5002];
 vector<int> aMatch, bMatch;
-int visited[5002];
-int visitCnt;
+bool visited[5002];
+bool isVisited;
 int n, m;
 
 bool dfs(int a) {
-	if (visited[a] == visitCnt) return false;
+	if (visited[a]) return false;
 
-	visited[a] = visitCnt;
+	visited[a] = true;
 
 	for (int b = 1; b <= m; b++) {
 		if (adj[a][b]) {
@@ -38,7 +38,7 @@ int bipartiteMatch() {
 	int cnt = 0;
 
 	for (int start = 1; start <= n; start++) {
-		visitCnt++;
+		fill(visited, visited + 5002, false);
 		if (dfs(start)) cnt++;
 	}
 
