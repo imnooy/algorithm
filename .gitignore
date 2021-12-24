@@ -51,6 +51,9 @@
 *.log
 *.tlog
 *.idb
+*.exe.recipe
+*.VC.db-shm
+*.VC.db-wal
 
 # End of https://www.toptal.com/developers/gitignore/api/c++
 *.enc
