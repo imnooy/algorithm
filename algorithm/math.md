@@ -155,7 +155,7 @@ GCD(20, 12) = GCD(12, 8) = GCD(8, 4) = GCD(4, 0) = 4
 ```java
 int gcd(int a, int b) {
   if(b == 0) return a;
-  return gcd(a, b % a);
+  return gcd(b, a % b);
 }
 ```
 
