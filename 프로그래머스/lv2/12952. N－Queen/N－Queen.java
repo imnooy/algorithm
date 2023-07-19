@@ -3,7 +3,6 @@ import java.util.*;
 class Solution {
     public boolean[][] isused;
     public int ans;
-    public Map<String, Boolean> map;
     
     public boolean isPossible(int x, int y, int n) {
         //가로
@@ -33,15 +32,6 @@ class Solution {
     
     public void func(int k, int n) {
         if(k == n) {
-            String str = "";
-            for(int i = 0; i < n; i++) {
-                for(int j = 0; j < n; j++) {
-                    if(!isused[i][j]) continue;
-                    str += (i + j + " ");
-                }
-            }
-            if(map.containsKey(str)) return;
-            map.put(str, true);
             ans++;
             return;
         }
@@ -70,7 +60,6 @@ class Solution {
     public int solution(int n) {
         int answer = 0;
         ans = 0;
-        map = new HashMap<>();
         isused = new boolean[n][n];
         func(0, n);
         return ans;
